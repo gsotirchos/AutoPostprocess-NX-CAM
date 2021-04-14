@@ -62,7 +62,7 @@ C:\Users\george\Desktop\MODEL1_SETUP_1\
  3. Modify, if needed, the default output path by editing `AutoPostprocess.dlx` in Block UI Styler.
  4. Modify, if needed, the list of available machines by editing `AutoPostprocess.dlx` in Block UI Styler. Then, in `AutoPostprocess.vb` insert the info for theese machines by adding an `extension` and `PostProcessor` entry in each `machine` dict inside the `Utils` class constructor.
  5. Execute the script in an open NX Manufacturing part (this is necessary) by doing either of the following:
-    * Run it as a journal<br>
+    * Run it as a journal:<br>
       1. Developer tab (if hidden *right click* the tab bar and tick *Developer*)
       2. Play
       3. Browse...
