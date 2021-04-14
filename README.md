@@ -11,11 +11,41 @@ I frequently had to manually export separate G-Code files for multiple CNC machi
  2. Select the machines for which the operations will be exported.
  3. Specify the output folder.
 
-By pressing OK/Apply a folder structure corresponding to the one in Program Order of the part is generated in the output path. In addition 3 screenshots (Iso, XY, XZ) are exported in every configuration folder. An example is shown in the following screenshot.
+By pressing OK/Apply a folder structure corresponding to the one in Program Order of the part is generated in the output path. Inside every configuration folder are also exported 3 screenshots (Iso, XY, XZ) showing the coordinate frame and the operations are grouped by machine. An example is shown in the following screenshot.
 
 <p align="center">
   <img src="./images/example_part.png" width="90%">
 </p>
+
+If for the example shown all operations are selected to be exported using the Mazak and Doosan postprocessors the resulting file structure is shown below:
+``` bash
+C:\Users\george\Desktop\MODEL1_SETUP_1\
+├── MODEL1_SETUP_1_ISO.PNG
+├── MODEL1_SETUP_1_XY.PNG
+├── MODEL1_SETUP_1_XZ.PNG
+├── MAZAK\
+│   ├── PHASE_1\
+│   │   ├── 01_FACE_MILLING.eia
+│   │   ├── 02_REST_MILLING.eia
+│   │   ├── 03_ZLEVEL_PROFILE.eia
+│   │   ├── 04_HOLE_D8.eia
+│   │   └── 05_CHAMFER.eia
+│   └── PHASE_2\
+│       ├── 01_SPOT_DRILLING.eia
+│       ├── 02_DRILLING_D4.5.eia
+│       └── 03_CHAMFER.eia
+└── DOOSAN\
+    ├── PHASE_1\
+    │   ├── 01_FACE_MILLING.mpf
+    │   ├── 02_REST_MILLING.mpf
+    │   ├── 03_ZLEVEL_PROFILE.mpf
+    │   ├── 04_HOLE_D8.mpf
+    │   └── 05_CHAMFER.mpf
+    └── PHASE_2\
+        ├── 01_SPOT_DRILLING.mpf
+        ├── 02_DRILLING_D4.5.mpf
+        └── 03_CHAMFER.mpf
+```
 
 ## Features
  - [x] Auto generation of all separate G-Code files for multiple machines (postporcessors).
@@ -26,11 +56,12 @@ By pressing OK/Apply a folder structure corresponding to the one in Program Orde
  - [x] The aforementioned behaviour (postprocessors, screenshots) is fully configurable by inserting entries at specified places in the scirpt.
 
 ## Installation
- 1. Keep the `AutoPostprocess.dlx` file in the `DLX\` directory, relative to the `AutoPostprocess.vb` file.<br>
+ 1. Clone and extract this repository in a desired location (you can delete the `screenshots` folder).
+ 2. Keep the `AutoPostprocess.dlx` file in the `DLX\` directory, relative to the `AutoPostprocess.vb` file.<br>
     Or modify, if needed, in `AutoPostprocess.vb` the `theDlxFileName` (and `JournalFolder`) class variable inside the `OutputParameters` class constructor.
- 2. Modify, if needed, the default output path by editing `AutoPostprocess.dlx` in Block UI Styler.
- 3. Modify, if needed, the list of available machines by editing `AutoPostprocess.dlx` in Block UI Styler. Then, in `AutoPostprocess.vb` insert the info for theese machines by adding an `extension` and `PostProcessor` entry in each `machine` dict inside the `Utils` class constructor.
- 4. Execute the script in an open NX Manufacturing part (this is necessary) by doing either of the following:
+ 3. Modify, if needed, the default output path by editing `AutoPostprocess.dlx` in Block UI Styler.
+ 4. Modify, if needed, the list of available machines by editing `AutoPostprocess.dlx` in Block UI Styler. Then, in `AutoPostprocess.vb` insert the info for theese machines by adding an `extension` and `PostProcessor` entry in each `machine` dict inside the `Utils` class constructor.
+ 5. Execute the script in an open NX Manufacturing part (this is necessary) by doing either of the following:
     * Run it as a journal<br>
       1. Developer tab (if hidden *right click* the tab bar and tick *Developer*)
       2. Play
