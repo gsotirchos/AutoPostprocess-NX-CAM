@@ -22,7 +22,7 @@ By pressing OK/Apply a folder structure corresponding to the one in Program Orde
  - [x] Auto generation of screenshots for each setup (MCS) in Geometry View.
  - [x] Auto generation of file structure according to Program Order.
  - [x] Smart detection of grouped operations: **Folders containing only operations and having only operations as siblings are exported as grouped operations** (can be verified in the Operations section before postprocesing). Useful for exporting grouped pattern instances of operations.
- - [x] Automatic renaming of the '1234' parent folder in Program Order.
+ - [x] Automatic renaming of the '1234' parent folder in Program Order according to file name.
  - [x] The aforementioned behaviour (postprocessors, screenshots) is fully configurable by inserting entries at specified places in the scirpt.
 
 ## Installation
