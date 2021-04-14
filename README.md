@@ -4,7 +4,7 @@ I frequently had to manually export separate G-Code files for multiple CNC machi
 
 ## Usage
 <p align="center">
-  <img src="./images/window.png" width="35%">
+  <img src="./images/window.png" width="30%">
 </p>
 
  1. Select operations for export in Operations section.
@@ -14,7 +14,7 @@ I frequently had to manually export separate G-Code files for multiple CNC machi
 By pressing OK/Apply a folder structure corresponding to the one in Program Order of the part is generated in the output path. An example is shown in the following screenshot.
 
 <p align="center">
-  <img src="./images/example_part.png" width="80%">
+  <img src="./images/example_part.png" width="90%">
 </p>
 
 ## Features
