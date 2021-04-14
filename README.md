@@ -1,6 +1,6 @@
 # AutoPostprocess-NX-CAM
 A simple utility script to automatically generate G-Code files from an NX Manufacturing part.
-I frequently had to manually export separate G-Code files for multiple CNC machines for every operation of a machined part as well as to take 2~2 screenshots of the part configuration for every setup. In order to avoid this clickfest, remain focused, and improve workflow flexibility when working on multiple CAM parts I wrote this simple script in Visual Basic with a GUI created with Block UI Styler.
+I frequently had to manually export separate G-Code files for multiple CNC machines for every operation of a machined part as well as to take 2~3 screenshots of the part configuration for every setup. In order to avoid this clickfest, remain focused, and improve workflow flexibility when working on multiple CAM parts I wrote this simple script in Visual Basic with a GUI created with Block UI Styler.
 
 ## Usage
 <p align="center">
@@ -11,7 +11,7 @@ I frequently had to manually export separate G-Code files for multiple CNC machi
  2. Select the machines for which the operations will be exported.
  3. Specify the output folder.
 
-By pressing OK/Apply a folder structure corresponding to the one in Program Order of the part is generated in the output path. An example is shown in the following screenshot.
+By pressing OK/Apply a folder structure corresponding to the one in Program Order of the part is generated in the output path. In addition 3 screenshots (Iso, XY, XZ) are exported in every configuration folder. An example is shown in the following screenshot.
 
 <p align="center">
   <img src="./images/example_part.png" width="90%">
