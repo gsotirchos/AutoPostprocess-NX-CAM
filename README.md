@@ -76,6 +76,6 @@ C:\Users\george\Desktop\MODEL1_SETUP_1\
       5. *Right click the new button*
       6. Edit Action
       7. Browse...
-      8. *navigate and select* `AutoPostprocess.vb`
+      8. *Navigate and select* `AutoPostprocess.vb`
       9. OK
       10. Close
